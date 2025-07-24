@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | MD. Fahim Ahmed</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .project-card {
+      position: relative;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .tooltip {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #222;
+      color: white;
+      padding: 5px 10px;
+      font-size: 0.75rem;
+      border-radius: 5px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .project-card:hover .tooltip {
+      opacity: 1;
+    }
+
+    .project-card .info {
+      padding: 15px;
+    }
+
+    .project-card .info h3 {
+      margin: 0 0 8px;
+    }
+
+    .project-card .info p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    @media (max-width: 600px) {
+      .project-card img {
+        height: 140px;
+      }
+    }
+
+    header {
+      background: #1a1a1a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Projects</h1>
+    <nav>
+      <a href="index.html">← Back to Home</a>
+    </nav>
+  </header>
+
+  <section class="projects-grid">
+
+    <div class="project-card html js">
+      <div class="tooltip">Built with HTML & JS</div>
+      <img src="images/project1.jpg" alt="Project 1" />
+      <div class="info">
+        <h3>Project 1</h3>
+        <p>Dynamic tool using DOM and JS events.</p>
+      </div>
+    </div>
+
+    <div class="project-card html css">
+      <div class="tooltip">Responsive HTML/CSS</div>
+      <img src="images/project2.jpg" alt="Project 2" />
+      <div class="info">
+        <h3>Project 2</h3>
+        <p>Modern layout using Flexbox and Grid.</p>
+      </div>
+    </div>
+
+    <div class="project-card cpp">
+      <div class="tooltip">C++ Console App</div>
+      <img src="images/project3.jpg" alt="Project 3" />
+      <div class="info">
+        <h3>Project 3</h3>
+        <p>File-based record manager built in C++.</p>
+      </div>
+    </div>
+
+    <div class="project-card js">
+      <div class="tooltip">JavaScript Project</div>
+      <img src="images/project4.jpg" alt="Project 4" />
+      <div class="info">
+        <h3>Project 4</h3>
+        <p>Form validation & animations with JS.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 MD. Fahim Ahmed
+  </footer>
+
+</body>
+</html>
